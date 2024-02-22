@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import img from './Images/six.png'
+import six from './Images/six.png'
 import {Box, Button, Card, CardContent, CardMedia, Grid, Stack, Typography} from '@mui/material'
 import HelpCenterOutlinedIcon from '@mui/icons-material/HelpCenterOutlined';
 import LoginIcon from '@mui/icons-material/Login';
@@ -23,7 +23,7 @@ function Hometemp() {
             <CardContent>
               <Typography variant='h3' gutterBottom>Goal</Typography>
             </CardContent>
-            <CardMedia component={'img'} image={img} height={400} width={50}/>
+            <CardMedia  image={six} height={400} width={50}/>
             <CardContent>
               <Typography variant='body1' gutterBottom>This tool concentrate more on the user needs.</Typography>
             </CardContent>
