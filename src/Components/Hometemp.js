@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import img from './Images/six.png'
+import img from '../component/Images/six.png'
 import {Box, Button, Card, CardContent, CardMedia, Grid, Stack, Typography} from '@mui/material'
 import HelpCenterOutlinedIcon from '@mui/icons-material/HelpCenterOutlined';
 import LoginIcon from '@mui/icons-material/Login';
