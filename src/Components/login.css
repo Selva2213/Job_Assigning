@@ -43,7 +43,7 @@
 }
 
 .skills{
-    background-image: url('D:\React\My project\job-role\src\Components\Images\six.png');
+    background-image: url('./Images/six.png');
     height: max-content;
 }
 
