@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import {Box, Button, Card, CardContent, CardMedia, Grid, Stack, Typography} from '@mui/material'
 import HelpCenterOutlinedIcon from '@mui/icons-material/HelpCenterOutlined';
 import LoginIcon from '@mui/icons-material/Login';
-import six from "./six.png";
 import InfoTwoToneIcon from '@mui/icons-material/InfoTwoTone';
 function Hometemp() {
     const navigate=useNavigate();
