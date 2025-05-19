@@ -1,30 +1,61 @@
-import { Route, Routes } from 'react-router-dom';
-import Home from './Components/Home';
-import Loginpage from './Components/LoginPage';
-import About from './Components/About';
-import Help from './Components/Help';
-import Loginusers from './Components/Loginusers';
-import Loginas from './Components/Loginas';
-import Skills from './Components/Skills';
-import Errorpage from './Components/Errorpage';
-import Simple from './Components/Simple';
-import Assigning from './Components/Assigning';
+import React, { useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import AdminDashboard from "./pages/AdminDashboard";
+import EmployeeDashboard from "./pages/EmployeeDashboard";
+import Login from "./pages/Login";  // import your Login.jsx
+
+import "./App.css";
+import SkillsWithJobs from "./Components/SkillsWithJob";
+import SkillAdmin from "./pages/SkillAdmin";
 
 function App() {
+  const [user, setUser] = useState(null); // {name, email, password}
+  const [role, setRole] = useState(""); // "admin" or "employee"
+
+  const handleLogin = (userData, userRole) => {
+    setUser(userData);
+    setRole(userRole);
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+    setRole("");
+  };
+
+  if (!user) {
+    return (
+      <div className="login-screen">
+        <Login onLogin={handleLogin} />
+      </div>
+    );
+  }
+
   return (
-    <div >
-    <Routes>
-    <Route path='/' element={<Home />}></Route>
-    <Route path='/login' element={<Loginpage/>}></Route>
-    <Route path='/about' element={<About/>}></Route>
-    <Route path='/help' element={<Help/>}></Route>
-    <Route path='/loginas' element={<Loginas/>}></Route>
-    <Route path='/loginusers' element={<Loginusers/>}></Route>
-    <Route path='/skills' element={<Skills/>}></Route>
-    <Route path='*' element={<Errorpage/>}></Route>
-    <Route path='lkj' element={<Simple/>}></Route>
-    <Route path='/assign' element={<Assigning/>}></Route>
-    </Routes>
+    <div className="home">
+      <div className="app-header">
+        <h1>Job Assigning App</h1>
+        <p>Welcome, {user.name} ({role})</p>
+        <button onClick={handleLogout}>Logout</button>
+      </div>
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            role === "admin" ? (
+              <AdminDashboard />
+            ) : (
+              <EmployeeDashboard username={user.name} />
+            )
+          }
+        />
+        <Route path="/skills" element={<SkillsWithJobs />} />
+        <Route
+          path="/manage-skills"
+          element={role === "admin" ? <SkillAdmin /> : <Navigate to="/" />}
+        />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
     </div>
   );
 }

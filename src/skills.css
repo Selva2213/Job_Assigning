@@ -1,0 +1,71 @@
+/* styles/SkillsWithJobs.css */
+.skills-jobs-container {
+  padding: 2rem;
+  background: linear-gradient(to right, #d3cce3, #e9e4f0);
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 2rem auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.skills-jobs-container h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skill-button {
+  padding: 0.75rem 1.5rem;
+  background: #7f53ac;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.skill-button:hover {
+  background: #5d2b94;
+}
+
+.skill-button.active {
+  background: #00c9ff;
+  color: #000;
+}
+
+.jobs-display h3 {
+  color: #4b0082;
+  margin-bottom: 1rem;
+}
+
+.jobs-display ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.job-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  color: #444;
+  transition: transform 0.2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  background-color: #f0f8ff;
+}

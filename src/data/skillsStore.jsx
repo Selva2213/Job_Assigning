@@ -1,0 +1,28 @@
+const skillsStore = {
+  JavaScript: ["Frontend Developer", "Full Stack Developer"],
+  Python: ["Data Scientist", "Backend Developer", "Machine Learning Engineer"],
+  React: ["React Developer", "UI Engineer", "Frontend Engineer"],
+  NodeJS: ["Backend Developer", "API Engineer"],
+  TypeScript: ["Frontend Developer", "Full Stack Developer"],
+  HTML: ["Web Developer", "Frontend Developer"],
+  CSS: ["Web Designer", "UI Developer"],
+  Angular: ["Angular Developer", "Frontend Engineer"],
+  VueJS: ["Vue Developer", "Frontend Developer"],
+  Java: ["Software Engineer", "Backend Developer", "Android Developer"],
+  "C#": [".NET Developer", "Software Engineer"],
+  PHP: ["Web Developer", "Backend Developer"],
+  Ruby: ["Ruby on Rails Developer", "Backend Engineer"],
+  Swift: ["iOS Developer", "Mobile App Developer"],
+  Kotlin: ["Android Developer", "Mobile Developer"],
+  Go: ["Backend Developer", "DevOps Engineer"],
+  Rust: ["Systems Programmer", "Blockchain Developer"],
+  SQL: ["Database Administrator", "Data Analyst"],
+  MongoDB: ["NoSQL Developer", "Backend Developer"],
+  AWS: ["Cloud Engineer", "DevOps Engineer"],
+  Docker: ["DevOps Engineer", "Infrastructure Engineer"],
+  Kubernetes: ["Cloud Engineer", "SRE"],
+  GraphQL: ["API Developer", "Frontend Developer"],
+  Django: ["Python Developer", "Backend Developer"],
+  Flutter: ["Mobile App Developer", "Cross-Platform Developer"]
+};
+export default skillsStore;

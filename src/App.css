@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+/* AppStyles.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* background: linear-gradient(to right, #f0f2f5, #ffffff); */
+    background-color: #4F959D;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-header {
+  background-color: #41644A;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-screen {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+    background-color: #4F959D;
+}
+
+.login-screen h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.login-screen button {
+  margin: 0.5rem;
+  padding: 10px 20px;
+  background-color: #0077cc;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.login-screen button:hover {
+  background-color: #005fa3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.job-card {
+  background: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-card h3 {
+  margin-top: 0;
+  color: #0077cc;
+}
+
+.job-card-actions button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.job-card-actions button:hover {
+  background-color: #218838;
+}
+
+.job-card-actions button:last-child {
+  background-color: #dc3545;
+}
+
+.job-card-actions button:last-child:hover {
+  background-color: #c82333;
+}
+
+.job-form {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.job-form h2 {
+  margin-top: 0;
+  color: #0077cc;
+}
+
+.job-form input,
+.job-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.job-form button {
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.job-form button:hover {
+  background-color: #005fa3;
+}
+
+.job-list {
+  max-width: 600px;
+  margin: auto;
 }
